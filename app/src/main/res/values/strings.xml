@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test task</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="first_trek_button_text">Построить маршрут</string>
+    <string name="previous_trek_button_text">Предыдущий \n маршрут</string>
+    <string name="next_trek_button_text">Следующий \n маршрут</string>
+    <string name="getting_coordinates">Получение координат</string>
+    <string name="coordinates_received">Коодинаты получены</string>
+    <string name="length">Длинна маршрута: </string>
+</resources>
