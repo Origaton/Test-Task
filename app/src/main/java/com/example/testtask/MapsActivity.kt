@@ -113,7 +113,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      * Метод рисует маршрут на карте, ставит маркеры и перемещает камеру
      * Пары координат(долгота, широта) для одного маршрута собираются в одельный массив(coordinates)
      * и преобразуются в LatLng, чтобы передать карте сразу все точки
-     * Toast отображает номер маршрута, если добавить это в TextView, то будет очень громоздко
      */
     private suspend fun createTrek(location: LocationInfo, trekNumber: Int) {
         val trekPoints = location.features[0].geometry.coordinates[trekNumber][0]
@@ -155,12 +154,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         distanceCalculation(coordinates)
 
         //отображение номера маршрута
-        Toast.makeText(
-            applicationContext,
-            "${trekNumber + 1}/${location.features[0].geometry.coordinates.size + 1}",
-            Toast.LENGTH_SHORT
-        )
-            .show()
+        bindingClass.trekNumberTV.text =
+            "${trekNumber + 1}/${location.features[0].geometry.coordinates.size + 1}"
     }
 
     /**
